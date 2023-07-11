@@ -3,10 +3,16 @@ RomRaider ECU Definitions for Siemens MS41 created from the prior versions hoste
 
 Credit must be supplied to Abhishek Shinde (MRF582) who we all owe so much to. This work is his legacy and we are forever better off for his contributions towards the BMW community. RIP mate.
 
+
 Additionally the below other contributors are recognised for their ongoing support and development efforts for this platform:
  Alec - d_munter
+ 
  Kim Freding - xbyte (RIP)
+ 
  Dale Schultz - dschultz
+ 
  Kyle - busterhax
+ 
  Abel - Enabled
+ 
  pazi88
