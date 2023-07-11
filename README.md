@@ -5,6 +5,7 @@ Credit must be supplied to Abhishek Shinde (MRF582) who we all owe so much to. T
 
 
 Additionally the below other contributors are recognised for their ongoing support and development efforts for this platform:
+
  Alec - d_munter
  
  Kim Freding - xbyte (RIP)
