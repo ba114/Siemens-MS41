@@ -112,6 +112,11 @@ These definitions are created for FREE without any sort of guarantee. The develo
 		<submodel>MS41.0/MS41.1/MS41.2</submodel>
 		<transmission>MT/AT</transmission>
 	</romid>
+	
+<!--Full Read Warning-->
+	<table type="Switch" name="Load a partial file instead" category="Full read detected. Load partial for more parameters" sizey="1" userlevel="5">
+		<description>You have loaded a FULL (256kb) read. Only maps that need the full read will be visible here. Load a PARTIAL (24kb) file to get access to all the tuning parameters.</description>
+	</table>
 
 <!--Control Bits-->
 	<table type="2D" name="Byte 4" category="Control Bits" storagetype="uint8" sizey="1" userlevel="1">
@@ -2598,18 +2603,22 @@ These definitions are created for FREE without any sort of guarantee. The develo
 		<state name="Enabled" data="75 F8 4C F7" />
 		<state name="Disabled" data="CC 00 CC 00" />
 	</table>
+	
 	<table type="Switch" name="Evaporative System" category="OBD2 Readiness Monitors" sizey="4" >
 		<state name="Enabled" data="75 F8 4C F7" />
 		<state name="Disabled" data="CC 00 CC 00" />
 	</table>
+	
 	<table type="Switch" name="Secondary Air System" category="OBD2 Readiness Monitors" sizey="4" >
 		<state name="Enabled" data="75 F8 4C F7" />
 		<state name="Disabled" data="CC 00 CC 00" />
 	</table>
+	
 	<table type="Switch" name="Oxygen Sensor" category="OBD2 Readiness Monitors" sizey="4" >
 		<state name="Enabled" data="75 F8 4C F7" />
 		<state name="Disabled" data="CC 00 CC 00" />
 	</table>
+	
 	<table type="Switch" name="Oxygen Sensor Heater" category="OBD2 Readiness Monitors" sizey="4" >
 		<state name="Enabled" data="75 F8 4C F7" />
 		<state name="Disabled" data="CC 00 CC 00" />
@@ -2827,14 +2836,14 @@ These definitions are created for FREE without any sort of guarantee. The develo
 		<state name="If this table displays a warning upon loading the ROM, DO NOT FLASH this file IF you have previously flashed SS1 MS41 20200403.enc or greater, else ECU may brick or cause ENGINE damage! Else, tune the stock AlphaN tables because Extended tables are disabled, if this button is grey."  data="15 40 00 40" />
 	</table>
 	
-	<table type="Switch" name="*** Diagnostic Parameter***" category="*** CUSTOM  MS41.3  FEATURES BELOW ***" sizey="2" userlevel="5"  storageaddress="0x33EA"> 133EA mem 33EA cal
+	<table type="Switch" name="*** Diagnostic Parameter***" category="*** CUSTOM  MS41.3  FEATURES BELOW ***" sizey="2" userlevel="5"  storageaddress="0x33EA">
 		<state name="[test] - IACV PWM - AlphaN"		data="02 E9" />
 		<state name="[test] - Front O2 Bank 2 - Volts"  data="98 FA" />
 		<state name="[test] - Front O2 Bank 1 - Volts"  data="9A FA" />
 		<state name="[test] - VLS_CAT1"				data="5A F0" />
 		<state name="[test] - VLS_CAT2"				data="06 F1" />
-		<state name="[test] - Rear O2 Bank 2 - Volts"data="94 FA" />
-		<state name="[test] - Rear O2 Bank 1 - Volts"data="96 FA" />
+		<state name="[test] - Rear O2 Bank 2 - Volts" data="94 FA" />
+		<state name="[test] - Rear O2 Bank 1 - Volts" data="96 FA" />
 		<state name="[test] - FF FF"					data="FF FF" />
 	</table>
 	
@@ -3091,8 +3100,8 @@ These definitions are created for FREE without any sort of guarantee. The develo
 		<state name="TPS Volts Bas" 	data="A2 FA" />
 		<state name="Rear O2 Bank 1" data="96 FA" />
 		<state name="Rear O2 Bank 2" data="94 FA" />
-		<state name="Front O2 Bank 2"data="98 FA" />
-		<state name="Front O2 Bank 1"data="9A FA" />	
+		<state name="Front O2 Bank 2" data="98 FA" />
+		<state name="Front O2 Bank 1" data="9A FA" />	
 		<state name="Evap. Pressure" data="A8 F5" />
 		<description>Select sensor input. TPS Voltage option can be used to demonstrate how voltage affects the readout. Use for diagnostic purposes.</description>
 	</table>
@@ -3105,7 +3114,7 @@ These definitions are created for FREE without any sort of guarantee. The develo
 	</table>
 	
 	<table type="Switch" name="Narrowband Emulation" category="Wideband O2" sizey="1" storageaddress="0x479F" >
-		<state name="[Enabled]"data="00" />
+		<state name="[Enabled]" data="00" />
 		<state name="[Disabled]"  data="FF" />
 		<description>Must connect Wideband O2 0-5V Analog Out to Front O2 Sensor Bank 1 (Pin 4) and select Single Channel O2 Feedback.</description>
 	</table>
@@ -3223,8 +3232,8 @@ These definitions are created for FREE without any sort of guarantee. The develo
 		<state name="TPS Volts Bas" 	data="A2 FA" />
 		<state name="Rear O2 Bank 1" data="96 FA" />
 		<state name="Rear O2 Bank 2" data="94 FA" />
-		<state name="Front O2 Bank 2"data="98 FA" />
-		<state name="Front O2 Bank 1"data="9A FA" />	
+		<state name="Front O2 Bank 2" data="98 FA" />
+		<state name="Front O2 Bank 1" data="9A FA" />	
 		<state name="Evap. Pressure" data="A8 F5" />
 		<description>Select sensor input. </description>
 	</table>
@@ -3242,8 +3251,8 @@ These definitions are created for FREE without any sort of guarantee. The develo
 		<state name="TPS Volts Bas" 	data="A2 FA" />
 		<state name="Rear O2 Bank 1" data="96 FA" />
 		<state name="Rear O2 Bank 2" data="94 FA" />
-		<state name="Front O2 Bank 2"data="98 FA" />
-		<state name="Front O2 Bank 1"data="9A FA" />	
+		<state name="Front O2 Bank 2" data="98 FA" />
+		<state name="Front O2 Bank 1" data="9A FA" />	
 		<state name="Evap. Pressure" data="A8 F5" />
 		<description>Select sensor input. TPS Voltage option can be used to demonstrate how voltage affects the readout. Use for diagnostic purposes.</description>
 	</table>
@@ -3273,8 +3282,8 @@ These definitions are created for FREE without any sort of guarantee. The develo
 		<state name="TPS Volts Bas" 	data="A2 FA" />
 		<state name="Rear O2 Bank 1" data="96 FA" />
 		<state name="Rear O2 Bank 2" data="94 FA" />
-		<state name="Front O2 Bank 2"data="98 FA" />
-		<state name="Front O2 Bank 1"data="9A FA" />	
+		<state name="Front O2 Bank 2" data="98 FA" />
+		<state name="Front O2 Bank 1" data="9A FA" />	
 		<state name="Evap. Pressure" data="A8 F5" />
 		<description>Select sensor input. TPS Voltage option can be used to demonstrate how voltage affects the readout. Use for diagnostic purposes.</description>
 	</table>
@@ -3300,8 +3309,8 @@ These definitions are created for FREE without any sort of guarantee. The develo
 		<state name="TPS Volts Bas" 	data="A2 FA" />
 		<state name="Rear O2 Bank 1" data="96 FA" />
 		<state name="Rear O2 Bank 2" data="94 FA" />
-		<state name="Front O2 Bank 2"data="98 FA" />
-		<state name="Front O2 Bank 1"data="9A FA" />	
+		<state name="Front O2 Bank 2" data="98 FA" />
+		<state name="Front O2 Bank 1" data="9A FA" />	
 		<state name="Evap. Pressure" data="A8 F5" />
 		<description>Select sensor input. Also enables FlexFuel Logic. Only enable if you have correctly wired and installed the FlexFuel Content Sensor. Else, the ECU will enrich based on the FlexFuel - Fuel Trim table incorrectly.
 
@@ -3353,7 +3362,7 @@ These definitions are created for FREE without any sort of guarantee. The develo
 		<state name="Enabled via ECU Pin 80" data="01" />
 		<state name="Enabled via ECU Pin 81" data="02" />
 		<state name="Enabled via ECU Pin 82" data="04" />
-		<state name="[Disabled]"data="FF" />
+		<state name="[Disabled]" data="FF" />
 		<description>Select which Pin will get 5V to switch Boost Maps.</description>
 	</table>
 	<!--Boost Map 1 - Y Axis Type
@@ -5512,9 +5521,9 @@ These definitions are created for FREE without any sort of guarantee. The develo
 	<table name="Detection - Fast Decreasing TPS - Min. ECT" storageaddress="0x237"/>
 
 <!--AlphaN-->
-	<table name="AlphaN - TPS"storageaddress="0x366" >
+	<table name="AlphaN - TPS" storageaddress="0x366" >
 		<table type="X Axis" storageaddress="0x2A3" />
-		<table type="Y Axis"storageaddress="0x2AC" />
+		<table type="Y Axis" storageaddress="0x2AC" />
 	</table>
 	
 	<table name="AlphaN - IAT Compensation" storageaddress="0x1D50" >
@@ -5525,12 +5534,12 @@ These definitions are created for FREE without any sort of guarantee. The develo
 		<table type="Y Axis" storageaddress="0x2AC" />
 	</table>
 	
-	<tablename="AlphaN - IACV" storageaddress="0x3DE" >
+	<table name="AlphaN - IACV" storageaddress="0x3DE" >
 		<table type="X Axis" storageaddress="0x2DC" />
 		<table type="Y Axis" storageaddress="0x2AC" />
 	</table>
 	
-	<tablename="AlphaN - IACV (TPS Compensation)" storageaddress="0x3A2" >
+	<table name="AlphaN - IACV (TPS Compensation)" storageaddress="0x3A2" >
 		<table type="X Axis" storageaddress="0x2A3" />
 		<table type="Y Axis" storageaddress="0x2AC" />
 	</table>
@@ -5689,7 +5698,7 @@ These definitions are created for FREE without any sort of guarantee. The develo
 	</table>
 
 	<table name="IACV - PWM" storageaddress="0x55C" >
-		<table type="Y Axis" name="IACV"storageaddress="0x4D8" />
+		<table type="Y Axis" name="IACV" storageaddress="0x4D8" />
 	</table>
 	
 	<table name="IACV - Latency" storageaddress="0x56E" >
@@ -6149,7 +6158,7 @@ This will typically be the storageaddress and sometimes the size entries. -->
 <table name="COP - Minimum Ignition Correction" storageaddress="0x25B"/>
 
 <table name="IACV - PWM" storageaddress="0x538" >
-	<table type="Y Axis" name="IACV"storageaddress="0x4B4" />
+	<table type="Y Axis" name="IACV" storageaddress="0x4B4" />
 </table>
 <table name="IACV - Latency" storageaddress="0x54A" >
 	<table type="Y Axis" name="Battery Voltage" storageaddress="0x4A9" />
@@ -6244,7 +6253,7 @@ This will typically be the storageaddress and sometimes the size entries. -->
 </table>
 
 <table name="IACV - PWM" storageaddress="0x6B2" >
-	<table type="Y Axis" name="IACV"storageaddress="0x62E" />
+	<table type="Y Axis" name="IACV" storageaddress="0x62E" />
 </table>
 <table name="IACV - Latency" storageaddress="0x6C4" >
 	<table type="Y Axis" name="Battery Voltage" storageaddress="0x623" />
@@ -6278,6 +6287,8 @@ This will typically be the storageaddress and sometimes the size entries. -->
 <memmodel>80C166W-M-T3</memmodel>
 <filesize>256kb</filesize>
 </romid>
+
+<table name="Load a partial file instead" /> 
 
 <table name="Byte 6 - O2 Feedback" storageaddress="0x14006">
 	<state name="1 Channel O2 Feedback" data="C" />
@@ -6340,6 +6351,9 @@ This will typically be the storageaddress and sometimes the size entries. -->
 <memmodel>80C166W-M-T3</memmodel>
 <filesize>256kb</filesize>
 </romid>
+
+<table name="Load a partial file instead" /> 
+
 <table name="Byte 6 - O2 Feedback" storageaddress="0x14006">
 	<state name="1 Channel O2 Feedback" data="C" />
 	<state name="2 Channel O2 Feedback" data="14" />
