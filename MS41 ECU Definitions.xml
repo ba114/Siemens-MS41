@@ -114,8 +114,19 @@ These definitions are created for FREE without any sort of guarantee. The develo
 	</romid>
 	
 <!--Full Read Warning-->
-	<table type="Switch" name="Load a partial file instead" category="Full read detected. Load partial for more parameters" sizey="1" userlevel="5">
+	<table type="2D" name="DUMMY ENTRY. DO NOT USE" category="FULL READ DETECTED. LOAD A PARTIAL (24KB) FOR MORE PARAMETERS" sizey="1" userlevel="1">
+		<scaling units="Decimal Value" />
+			<table type="Static Y Axis" name="You have loaded a FULL (256kb) read. Load a PARTIAL (24kb) file to get access to all the tuning parameters." sizey="1">
+			</table>		
 		<description>You have loaded a FULL (256kb) read. Only maps that need the full read will be visible here. Load a PARTIAL (24kb) file to get access to all the tuning parameters.</description>
+	</table>
+	
+<!--MS41.0 Warning-->
+	<table type="2D" name="DUMMY ENTRY. DO NOT USE (MS41.0)" category="UNSUPPORTED VERSION. SWITCH TO ID41 FOR MORE MAPS" sizey="1" userlevel="1">
+		<scaling units="Decimal Value" />
+			<table type="Static Y Axis" name="You have loaded an unsupported version. Update to ID41 for more maps" sizey="1">
+			</table>		
+		<description>You have loaded an unsupported version. Update to ID41 by flashing a FULL (256kb) file, then take a partial read for more maps</description>
 	</table>
 
 <!--Control Bits-->
@@ -5968,6 +5979,8 @@ This will typically be the storageaddress and sometimes the size entries. -->
 <memmodel>80C166W-M-T3</memmodel>
 <filesize>24kb</filesize>
 </romid>
+
+<table name="DUMMY ENTRY. DO NOT USE (MS41.0)" storageaddress="0x00" />
 <table name="Byte 4" storageaddress="0x4" />
 <table name="Byte 5" storageaddress="0x5" />
 <table name="Byte 6 - O2 Feedback" storageaddress="0x6">
@@ -6053,6 +6066,8 @@ This will typically be the storageaddress and sometimes the size entries. -->
 <memmodel>80C166W-M-T3</memmodel>
 <filesize>24kb</filesize>
 </romid>
+
+<table name="DUMMY ENTRY. DO NOT USE (MS41.0)" storageaddress="0x00" />
 <table name="Byte 4" storageaddress="0x4" />
 <table name="Byte 5" storageaddress="0x5" />
 <table name="Byte 6 - O2 Feedback" storageaddress="0x6">
@@ -6188,6 +6203,9 @@ This will typically be the storageaddress and sometimes the size entries. -->
 <memmodel>80C166W-M-T3</memmodel>
 <filesize>24kb</filesize>
 </romid>
+
+<table name="DUMMY ENTRY. DO NOT USE (MS41.0)" storageaddress="0x00" />
+
 <table name="Byte 4" storageaddress="0x4" />
 <table name="Byte 5" storageaddress="0x5" />
 <table name="Byte 6 - O2 Feedback" storageaddress="0x6">
@@ -6288,7 +6306,7 @@ This will typically be the storageaddress and sometimes the size entries. -->
 <filesize>256kb</filesize>
 </romid>
 
-<table name="Load a partial file instead" /> 
+<table name="DUMMY ENTRY. DO NOT USE" storageaddress="0x00" /> 
 
 <table name="Byte 6 - O2 Feedback" storageaddress="0x14006">
 	<state name="1 Channel O2 Feedback" data="C" />
@@ -6352,7 +6370,7 @@ This will typically be the storageaddress and sometimes the size entries. -->
 <filesize>256kb</filesize>
 </romid>
 
-<table name="Load a partial file instead" /> 
+<table name="DUMMY ENTRY. DO NOT USE" storageaddress="0x00" /> 
 
 <table name="Byte 6 - O2 Feedback" storageaddress="0x14006">
 	<state name="1 Channel O2 Feedback" data="C" />
