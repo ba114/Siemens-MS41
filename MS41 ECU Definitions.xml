@@ -1125,8 +1125,6 @@ These definitions are created for FREE without any sort of guarantee. The develo
 		<description>AlphaN - TPS (DTC 12)</description>
 	</table>
 
-<!--Speed Density-->
-	<table type="3D" name="SD - Load" category="Speed Density" />
 
 <!--Fuel-->
 	<table type="3D" name="Fuel Injection - Base" category="Fuel" storagetype="uint16" endian="little" sizex="12" sizey="16" userlevel="1" >
@@ -2907,11 +2905,6 @@ These definitions are created for FREE without any sort of guarantee. The develo
 		</description>
 	</table>
 	
-	<table type="Switch" name="AlphaN or MAF or Speed Density" category="Fuel" sizey="1" storageaddress="0x33E0">
-		<state name="AlphaN Mode"  data="01" />	
-		<state name="MAF Mode"  data="FF" />
-		<description>Select applicable metering mode.</description>
-	</table>
 	
 	<table type="Switch" name="DTC 8 - Air Flow Meter (HFM) x252" category="AlphaN" sizey="1" storageaddress="0x252">
 		<state name="Enabled"  data="14" />
@@ -2967,7 +2960,7 @@ These definitions are created for FREE without any sort of guarantee. The develo
 			<table type="Y Axis" name="Engine Speed" storagetype="uint16" endian="little"  logparam="P8" storageaddress="3638">
 				<scaling units="RPM" expression="x" to_byte="x" format="#" fineincrement="50" coarseincrement="100" />
 			</table>
-		<description>This table contains the Injector Pulse Width (in milliseconds) needed to get an AFR of 14.7 at a given Load and Engine Speed. Adjust this by a percentage of injector difference from stock as a baseline. Tune a needed.</description>
+		<description>This is the main ignition timing advance map.</description>
 	</table>
 	
 	<table type="3D" name="Ignition Timing - Base - VANOS Correction" category="Ignition Timing" storagetype="uint8" sizex="20" sizey="20" storageaddress="3E6E" >
@@ -3441,6 +3434,8 @@ These definitions are created for FREE without any sort of guarantee. The develo
 		<description> This is multiplied to the Boost ControL PWM calculated thus far.</description>
 	</table>
 
+
+<!--Speed Density-->
 	<table type="3D" name="SD - Load" category="Speed Density"  storagetype="uint16" endian="little" sizex="20" sizey="20" storageaddress="0x443C">
 		<scaling units="mg/stroke *Limit = 1389* (Measured before Port Temperature Compensation)" expression="x*(1389/65535)" to_byte="x/(1389/65535)" format="0.00" fineincrement=".02" coarseincrement="5" />
 			<table type="X Axis" name="Manifold Absolute Pressure (MAP)" storagetype="uint16" endian="little" storageaddress="0x47A4">
